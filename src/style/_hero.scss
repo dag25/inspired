@@ -1,0 +1,116 @@
+.hero {
+	margin-bottom: 80px;
+	background-color: $dark-gray;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	color: $second-color;
+
+	@include tablet {
+		margin-bottom: 64px;
+	}
+
+	@include mobile {
+		margin-bottom: 24px;
+	}
+
+	// .hero__women
+
+	&__women {
+		background-image: url('../img/woman-bg.jpg');
+
+		@include laptop {
+			background-image: url('../img/woman-bg-2.jpg');
+		}
+
+		@include tablet {
+			background-image: url('../img/woman-bg-3.jpg');
+		}
+
+		@include mobile {
+			background-image: url('../img/woman-bg-4.jpg');
+		}
+	}
+
+	// .hero__men
+
+	&__men {
+		background-image: url('../img/man-bg.jpg');
+
+		@include laptop {
+			background-image: url('../img/man-bg-2.jpg');
+		}
+
+		@include tablet {
+			background-image: url('../img/man-bg-3.jpg');
+		}
+
+		@include mobile {
+			background-image: url('../img/man-bg-4.jpg');
+		}
+	}
+
+	// .hero__content
+
+	&__content {
+		padding: 172px 0 86px;
+		max-width: 590px;
+
+		@include tablet {
+			padding: 156px 0 50px;
+			max-width: 410px;
+		}
+
+		@include mobile {
+			padding: 76px 0 24px;
+		}
+	}
+
+	// .hero__title
+
+	&__title {
+		margin-bottom: 40px;
+		font-weight: 400;
+		font-size: 44px;
+		line-height: 120%;
+		text-transform: uppercase;
+
+		@include tablet {
+			margin-bottom: 24px;
+			font-size: 30px;
+		}
+
+		@include mobile {
+			margin-bottom: 16px;
+			font-size: 20px;
+		}
+	}
+
+	// .hero__link
+
+	&__link {
+		display: inline-block;
+		padding: 14px 40px;
+		border: 1px solid $second-color;
+		background-color: transparent;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+		text-transform: uppercase;
+		transition-property: background-color, border-color;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-in-out;
+
+		&:hover {
+			background-color: $dark-gray;
+			border-color: $dark-gray;
+		}
+
+		@include tablet {
+			padding: 12px 40px;
+			font-size: 10px;
+			line-height: 12px;
+		}
+	}
+}

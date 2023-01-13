@@ -1,0 +1,34 @@
+.footer-development {
+	// .footer-development__list
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		@include tablet {
+			gap: 11px;
+		}
+
+		@include mobile {
+			gap: 4px;
+		}
+	}
+
+	// .footer-development__item
+
+	&__item {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 130%;
+
+		@include tablet {
+			font-size: 10px;
+		}
+	}
+
+	// .footer-development__link
+
+	&__link {
+	}
+}

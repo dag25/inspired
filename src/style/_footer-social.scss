@@ -1,0 +1,45 @@
+.footer-social {
+	// .footer-social__title
+
+	&__title {
+		margin-bottom: 16px;
+	}
+
+	// .footer-social__subtitle
+
+	&__subtitle {
+		margin-bottom: 20px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+
+		@include tablet {
+			margin-bottom: 16px;
+			font-size: 12px;
+			line-height: 15px;
+		}
+	}
+
+	// .footer-social__list
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+
+		@include mobile {
+			justify-content: start;
+		}
+	}
+
+	// .footer-social__item
+
+	&__item {
+	}
+
+	// .footer-social__link
+
+	&__link {
+	}
+}

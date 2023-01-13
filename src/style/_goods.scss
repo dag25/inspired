@@ -1,0 +1,46 @@
+.goods {
+	// .goods__title
+
+	&__title {
+		padding-bottom: 25px;
+		border-bottom: 1px solid $light-gray;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 39px;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include tablet {
+			padding-bottom: 16px;
+			font-size: 24px;
+			line-height: 29px;
+		}
+
+		@include mobile {
+			padding-bottom: 9px;
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	// .goods__list
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 280px);
+		gap: 40px 20px;
+		justify-content: space-evenly;
+		padding-top: 40px;
+
+		@include tablet {
+			grid-template-columns: repeat(auto-fill, 140px);
+			row-gap: 24px;
+			padding-top: 24px;
+		}
+
+		@include mobile {
+			gap: 16px 10px;
+			padding-top: 16px;
+		}
+	}
+}
