@@ -1,52 +1,89 @@
 .footer {
-	padding-bottom: 16px;
-
 	@include tablet {
 	}
 	// .footer__container
 
 	&__container {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 50px 20px;
-		padding-top: 30px;
+		grid-template-areas:
+			'category social contacts'
+			'copyright . development';
+		grid-template-columns: 1fr 2fr 1fr;
+		gap: 26px 20px;
+		padding-top: 51px;
+		padding-bottom: 16px;
 		border-top: 1px solid $light-gray;
 
+		@include laptop {
+			grid-template-columns: 1fr 1fr 1fr;
+			padding-top: 31px;
+		}
+
 		@include tablet {
-			gap: 17px 40px;
+			grid-template-columns: 1fr 2fr 1fr;
+			row-gap: 17px;
 			padding-top: 25px;
+			padding-bottom: 16px;
 		}
 
 		@include mobile {
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: 1fr 40px 30px 24px;
-			gap: 24px 0;
+			grid-template-areas:
+				'category social'
+				'contacts contacts'
+				'development development'
+				'copyright copyright';
+			grid-template-columns: 1fr max-content;
+			gap: 24px;
+			padding-top: 17px;
 		}
 	}
 
 	// .footer__item--category
 
 	&__item--category {
-		display: flex;
+		grid-area: category;
+	}
+
+	// .footer__item--social
+
+	&__item--social {
+		grid-area: social;
+		justify-self: center;
+	}
+
+	// .footer__item--contacts
+
+	&__item--contacts {
+		grid-area: contacts;
+	}
+
+	// .footer__item--development
+
+	&__item--development {
+		grid-area: development;
+	}
+
+	// .footer__item--copyright
+
+	&__item--copyright {
+		grid-area: copyright;
+		align-self: end;
 	}
 
 	// .footer__title
 
 	&__title {
-		margin-bottom: 24px;
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 22px;
 		text-transform: uppercase;
 
 		@include tablet {
-			margin-bottom: 16px;
 			font-size: 16px;
 			line-height: 19px;
 		}
 
 		@include mobile {
-			margin-bottom: 8px;
 			font-size: 14px;
 			line-height: 17px;
 		}
@@ -55,46 +92,10 @@
 	// .footer__link
 
 	&__link {
-	}
+		transition: color 0.3s ease-in-out;
 
-	// .footer__item--social
-
-	&__item--social {
-		grid-column: 2/4;
-		text-align: center;
-
-		@include mobile {
-			text-align: left;
-		}
-	}
-
-	// .footer__item--contacts
-
-	&__item--contacts {
-		grid-column: 4/5;
-
-		@include mobile {
-			grid-column: 1/2;
-			grid-row: 2/3;
-		}
-	}
-
-	// .footer__item--copyright
-
-	&__item--copyright {
-		@include mobile {
-			grid-row: 4;
-		}
-	}
-
-	// .footer__item--development
-
-	&__item--development {
-		grid-column: 4/5;
-
-		@include mobile {
-			grid-column: 1/2;
-			grid-row: 3/4;
+		&:hover {
+			color: $gray;
 		}
 	}
 }

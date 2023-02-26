@@ -1,35 +1,20 @@
 .footer-contacts {
 	display: flex;
 	flex-direction: column;
-	// .footer-contacts__mail
+	gap: 16px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
 
-	&__mail {
-		margin-bottom: 16px;
-		font-weight: 400;
-		font-size: 18px;
-		line-height: 22px;
-
-		@include tablet {
-			margin-bottom: 21px;
-			font-size: 14px;
-			line-height: 17px;
-		}
-
-		@include mobile {
-			margin-bottom: 9px;
-		}
+	@include tablet {
+		gap: 21px;
+		font-size: 14px;
+		line-height: 17px;
 	}
 
-	// .footer-contacts__phone
-
-	&__phone {
-		font-weight: 400;
-		font-size: 18px;
-		line-height: 22px;
-
-		@include tablet {
-			font-size: 14px;
-			line-height: 17px;
-		}
+	@include mobile {
+		gap: 8px;
+		font-size: 12px;
+		line-height: 15px;
 	}
 }

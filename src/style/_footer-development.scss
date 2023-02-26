@@ -1,5 +1,13 @@
 .footer-development {
-	// .footer-development__list
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 130%;
+
+	@include tablet {
+		font-size: 10px;
+	}
+
+	// footer-development__list
 
 	&__list {
 		display: flex;
@@ -13,22 +21,5 @@
 		@include mobile {
 			gap: 4px;
 		}
-	}
-
-	// .footer-development__item
-
-	&__item {
-		font-weight: 400;
-		font-size: 12px;
-		line-height: 130%;
-
-		@include tablet {
-			font-size: 10px;
-		}
-	}
-
-	// .footer-development__link
-
-	&__link {
 	}
 }

@@ -1,33 +1,40 @@
 .footer-category {
-	grid-column: 1/2;
-	display: flex;
-	flex-direction: column;
 	// .footer-category__title
 
 	&__title {
-		font-weight: 400;
-		font-size: 18px;
-		line-height: 22px;
-		text-transform: uppercase;
+		margin-bottom: 24px;
+
+		@include tablet {
+			margin-bottom: 16px;
+		}
+
+		@include tablet {
+			margin-bottom: 8px;
+		}
 	}
 
 	// .footer-category__list
 
 	&__list {
 		display: flex;
-		justify-content: space-between;
+		gap: 80px;
+
+		@include tablet {
+			gap: 30px;
+		}
 
 		@include tablet {
 			flex-direction: column;
+			gap: 7px;
 		}
 	}
 
 	// .footer-category__item
 
 	&__item {
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
+		// font-weight: 400;
+		// font-size: 14px;
+		// line-height: 17px;
 	}
 
 	// .footer-category__subtitle
@@ -39,7 +46,7 @@
 		line-height: 17px;
 
 		@include tablet {
-			margin-bottom: 7px;
+			margin-bottom: 0px;
 			font-size: 12px;
 			line-height: 15px;
 		}
@@ -48,7 +55,11 @@
 	// .footer-category__sublist
 
 	&__sublist {
+		display: flex;
+		flex-direction: column;
 		gap: 6px;
+		font-size: 14px;
+		line-height: 17px;
 
 		@include tablet {
 			display: none;
